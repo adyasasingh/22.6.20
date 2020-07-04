@@ -1,0 +1,27 @@
+<script>
+    var example = 'abcdefabcdefssssjkb';
+   let array =[...example];
+  let arr= array.sort()
+   console.log(array);
+   let count =1;
+   let letter=[]
+   let res = function(arr){
+   
+
+    for ( var i = 0; i < arr.length; i++){
+        console.log(arr);
+
+        if(arr[i] === arr[i+1]){
+            count++;
+        }else{
+            let value=`${count}${arr[i]}`;
+            letter = [...letter,value]
+            count=1;
+        }
+
+        }
+        return letter;
+   }
+   
+console.log(res('abcdefabcdefssssjkb'));
+</script>
